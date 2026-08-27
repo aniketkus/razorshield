@@ -1,0 +1,47 @@
+{
+  "fraud": {
+    "model": "Fraud Spike Detector",
+    "label": "fraud",
+    "precision": 0.1124,
+    "recall": 0.567,
+    "f1": 0.1877,
+    "roc_auc": 0.7123,
+    "pr_auc": 0.133,
+    "tp": 351,
+    "fp": 2771,
+    "tn": 6610,
+    "fn": 268,
+    "fp_cost_inr": 16004615.18,
+    "fn_cost_inr": 2321853.23
+  },
+  "return": {
+    "model": "Return Risk Scorer",
+    "label": "return",
+    "precision": 0.3015,
+    "recall": 0.0399,
+    "f1": 0.0705,
+    "roc_auc": 0.6923,
+    "pr_auc": 0.2531,
+    "tp": 60,
+    "fp": 139,
+    "tn": 8357,
+    "fn": 1444,
+    "fp_cost_inr": 802829.85,
+    "fn_cost_inr": 12510283.83
+  },
+  "chargeback": {
+    "model": "Chargeback Scorer",
+    "label": "chargeback",
+    "precision": 0.0255,
+    "recall": 0.8051,
+    "f1": 0.0494,
+    "roc_auc": 0.6251,
+    "pr_auc": 0.0298,
+    "tp": 157,
+    "fp": 6001,
+    "tn": 3804,
+    "fn": 38,
+    "fp_cost_inr": 34660301.6,
+    "fn_cost_inr": 329218.0
+  }
+}
