@@ -2,17 +2,17 @@
   "fraud": {
     "model": "Fraud Spike Detector",
     "label": "fraud",
-    "precision": 0.1124,
-    "recall": 0.567,
-    "f1": 0.1877,
-    "roc_auc": 0.7123,
-    "pr_auc": 0.133,
-    "tp": 351,
-    "fp": 2771,
-    "tn": 6610,
-    "fn": 268,
-    "fp_cost_inr": 16004615.18,
-    "fn_cost_inr": 2321853.23
+    "precision": 0.1057,
+    "recall": 0.6898,
+    "f1": 0.1834,
+    "roc_auc": 0.7165,
+    "pr_auc": 0.1359,
+    "tp": 427,
+    "fp": 3611,
+    "tn": 5770,
+    "fn": 192,
+    "fp_cost_inr": 20856248.8,
+    "fn_cost_inr": 1663417.24
   },
   "return": {
     "model": "Return Risk Scorer",
