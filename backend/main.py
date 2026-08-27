@@ -3,8 +3,14 @@ RazorShield – FastAPI Main Application
 """
 import json
 import os
+import sys
 from pathlib import Path
 from contextlib import asynccontextmanager
+
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,15 +26,15 @@ REPORTS_DIR = Path(__file__).parent / "reports"
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Pre-load models on startup
-    print("🛡️  RazorShield starting — pre-loading models …")
+    print("RazorShield starting -- pre-loading models ...")
     try:
         from models.fraud_detector import _load_models as fl
         from models.return_scorer import _load_models as rl
         from models.chargeback_responder import _load_models as cl
         fl(); rl(); cl()
-        print("✅  All models loaded")
+        print("All models loaded successfully.")
     except FileNotFoundError:
-        print("⚠️  Models not found — run `python data/train_models.py` first")
+        print("Warning: Models not found -- run `python data/train_models.py` first")
     yield
 
 
