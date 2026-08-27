@@ -137,7 +137,7 @@ def train_fraud_detector(df_train, df_test, results):
     X_sm, y_sm = smote.fit_resample(X_tr_enc, y_train)
 
     inner_clf = RandomForestClassifier(
-        n_estimators=300, max_depth=12, class_weight="balanced",
+        n_estimators=150, max_depth=10, class_weight="balanced",
         random_state=42, n_jobs=-1
     )
     inner_clf.fit(X_sm, y_sm)
@@ -152,9 +152,9 @@ def train_fraud_detector(df_train, df_test, results):
     evaluate_model("Fraud Spike Detector", y_test, y_pred, y_prob,
                    "fraud", avg_amount, results)
 
-    # Save artifacts
-    joblib.dump(preprocessor,  MODELS_DIR / "fraud_preprocessor.pkl")
-    joblib.dump(inner_clf,      MODELS_DIR / "fraud_classifier.pkl")
+    # Save artifacts with compression (keeps files <5MB for GitHub)
+    joblib.dump(preprocessor,  MODELS_DIR / "fraud_preprocessor.pkl", compress=3)
+    joblib.dump(inner_clf,      MODELS_DIR / "fraud_classifier.pkl", compress=3)
     joblib.dump({"threshold": threshold}, MODELS_DIR / "fraud_config.pkl")
     print("  ✅  Saved fraud_preprocessor.pkl + fraud_classifier.pkl")
 
@@ -187,8 +187,8 @@ def train_return_scorer(df_train, df_test, results):
     evaluate_model("Return Risk Scorer", y_test, y_pred, y_prob,
                    "return", avg_amount, results)
 
-    joblib.dump(preprocessor, MODELS_DIR / "return_preprocessor.pkl")
-    joblib.dump(clf,           MODELS_DIR / "return_classifier.pkl")
+    joblib.dump(preprocessor, MODELS_DIR / "return_preprocessor.pkl", compress=3)
+    joblib.dump(clf,           MODELS_DIR / "return_classifier.pkl", compress=3)
     joblib.dump({"threshold": threshold}, MODELS_DIR / "return_config.pkl")
     print("  ✅  Saved return_preprocessor.pkl + return_classifier.pkl")
 
@@ -224,8 +224,8 @@ def train_chargeback_scorer(df_train, df_test, results):
     evaluate_model("Chargeback Scorer", y_test, y_pred, y_prob,
                    "chargeback", avg_amount, results)
 
-    joblib.dump(preprocessor, MODELS_DIR / "chargeback_preprocessor.pkl")
-    joblib.dump(clf,           MODELS_DIR / "chargeback_classifier.pkl")
+    joblib.dump(preprocessor, MODELS_DIR / "chargeback_preprocessor.pkl", compress=3)
+    joblib.dump(clf,           MODELS_DIR / "chargeback_classifier.pkl", compress=3)
     joblib.dump({"threshold": threshold}, MODELS_DIR / "chargeback_config.pkl")
     print("  ✅  Saved chargeback_preprocessor.pkl + chargeback_classifier.pkl")
 
