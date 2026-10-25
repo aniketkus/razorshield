@@ -32,3 +32,6 @@ notebooks/.ipynb_checkpoints/
 
 # Logs
 *.log
+
+# Binaries
+cloudflared.exe

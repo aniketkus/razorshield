@@ -4,8 +4,8 @@ import axios from 'axios'
 import App from './App.jsx'
 import './index.css'
 
-// Point axios directly to backend port 8000
-axios.defaults.baseURL = 'http://127.0.0.1:8000'
+// Use environment variable if provided, or default to relative path so Vite proxy forwards to backend
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || ''
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
