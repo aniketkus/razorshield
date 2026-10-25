@@ -33,6 +33,9 @@ start.bat
 - Boots the dashboard directly at **`http://localhost:5173`** (API Docs at `http://localhost:8000/docs`).
 - **Zero auth/database required** — instant live simulated feeds, dynamic score presets, and interactive ML explainability charts.
 
+### 3. Video Demo & AI Walkthrough
+- A full 5-minute pitch video script with exact screen clicks, timestamps, and AI voiceover narration is available in **[`VIDEO_SCRIPT.md`](file:///c:/Users/hp/Downloads/razorpay%20internship/razorshield/VIDEO_SCRIPT.md)**.
+
 ---
 
 ## 🎯 The Problem
@@ -138,6 +141,7 @@ razorshield/
 ├── start.bat                  # One-click local startup script
 ├── start_live_tunnel.bat      # One-click startup with Cloudflare live tunnel
 ├── SUBMISSION.md              # Official Razorpay Internship submission details
+├── VIDEO_SCRIPT.md            # 5-minute video pitch & AI voiceover walkthrough script
 └── README.md
 ```
 

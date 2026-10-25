@@ -34,7 +34,8 @@ Indian e-commerce and D2C merchants running on digital payments (UPI, Rupay, cre
 ---
 
 ### **5-Minute Pitch Video**
-> **Link**: `[Insert your Unlisted YouTube / Loom Video Link Here]`
+> **Link**: `[Insert your Unlisted YouTube / Loom Video Link Here]`  
+> *(Full word-for-word voiceover script and recording steps available in [VIDEO_SCRIPT.md](file:///c:/Users/hp/Downloads/razorpay%20internship/razorshield/VIDEO_SCRIPT.md))*
 
 #### **Video Structure & Breakdown (5:00 Total)**:
 - **0:00 – 0:45 | Context & Problem**: The hidden margin killer in Indian BFSI & D2C — why blunt rules fail and false-positive merchant friction costs more than fraud itself.
