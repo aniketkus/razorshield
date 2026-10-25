@@ -28,7 +28,7 @@ Indian e-commerce and D2C merchants running on digital payments (UPI, Rupay, cre
 ---
 
 ### **GitHub Repo URL**
-> **`https://github.com/<YOUR_GITHUB_USERNAME>/razorshield`**  
+> **`https://github.com/aniketkus/razorshield`**  
 *(Public repository containing full FastAPI backend, React dashboard, training pipelines, and CI workflows)*
 
 ---
