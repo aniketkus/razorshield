@@ -27,6 +27,12 @@ Indian e-commerce and D2C merchants running on digital payments (UPI, Rupay, cre
 
 ---
 
+### **Live Interactive Demo URL**
+> **`https://razorshield.vercel.app`**  
+> *(24/7 Live Deployment with Operations Console, Scenario Replay, and Risk Intelligence)*
+
+---
+
 ### **GitHub Repo URL**
 > **`https://github.com/aniketkus/razorshield`**  
 *(Public repository containing full FastAPI backend, React dashboard, training pipelines, and CI workflows)*
