@@ -21,7 +21,7 @@ RazorShield includes automated 1-click launch scripts to run the full defense pl
 ### 1. Instant Public Live Demo (Cloudflare Tunnel)
 To test across devices or share with evaluators over a secure public HTTPS link:
 ```cmd
-start_live_tunnel.bat
+[start_live_tunnel.bat](https://*.trycloudflare.com)
 ```
 - Automatically launches the **FastAPI ML backend** (port 8000) and **Vite frontend** (port 5173).
 - Initializes `cloudflared.exe` and outputs a fresh, live public **`https://*.trycloudflare.com`** URL in the console.
