@@ -4,7 +4,7 @@
 > *Empowering digital merchants to stop revenue bleed from fraud, RTO returns, and lost chargebacks.*
 
 [![RazorShield CI](https://github.com/aniketkus/razorshield/actions/workflows/ci.yml/badge.svg)](https://github.com/aniketkus/razorshield/actions)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-1--Click%20Launch-blueviolet?style=for-the-badge&logo=cloudflare)](#-live-interactive-demo--tunnel)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel%20Deployment-blueviolet?style=for-the-badge&logo=vercel)](https://razorshield.vercel.app)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
@@ -14,27 +14,22 @@
 
 ---
 
-## 🌐 Live Interactive Demo & Tunnel
+## 🌐 Live Interactive Demo & Quick Access
 
-RazorShield includes automated 1-click launch scripts to run the full defense platform locally or expose a live public HTTPS demo link via Cloudflare Tunnel:
+### 1. 24/7 Cloud Deployment
+Test the live full-stack system right now in your browser:  
+🔗 **[https://razorshield.vercel.app](https://razorshield.vercel.app)**
 
-### 1. Instant Public Live Demo (Cloudflare Tunnel)
-To test across devices or share with evaluators over a secure public HTTPS link:
-```cmd
-https://razorshield.vercel.app
-```
-- Automatically launches the **FastAPI ML backend** (port 8000) and **Vite frontend** (port 5173).
-- Initializes `cloudflared.exe` and outputs a fresh, live public **`https://*.trycloudflare.com`** URL in the console.
+- **No login or database setup required** — instant access to live feeds, dynamic score sliders, and interactive ML explainability charts.
+- **Full-stack integration** — all dashboard actions execute real-time inference against the trained ML backend models.
 
-### 2. Local Dashboard Access
-```cmd
-start.bat
-```
-- Boots the dashboard directly at **`http://localhost:5173`** (API Docs at `http://localhost:8000/docs`).
-- **Zero auth/database required** — instant live simulated feeds, dynamic score presets, and interactive ML explainability charts.
+### 2. Local 1-Click Launch (Windows)
+- **Local Dashboard**: Double-click `start.bat` (`http://localhost:5173`).
+- **Public Tunnel**: Double-click `start_live_tunnel.bat` (launches local servers and generates a fresh public `https://*.trycloudflare.com` URL).
 
 ### 3. Video Demo & AI Walkthrough
-- A full 5-minute pitch video script with exact screen clicks, timestamps, and AI voiceover narration is available in **[`VIDEO_SCRIPT.md`](file:///c:/Users/hp/Downloads/razorpay%20internship/razorshield/VIDEO_SCRIPT.md)**.
+- A complete 5-minute pitch video script with timestamped screen clicks, problem context, and AI voiceover narration is available in **[`VIDEO_SCRIPT.md`](VIDEO_SCRIPT.md)**.
+
 
 ---
 
