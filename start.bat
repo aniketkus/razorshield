@@ -15,17 +15,21 @@ if errorlevel 1 (
 )
 
 echo.
-echo [2/4] Training ML models (this takes ~2-3 minutes)...
-python data/train_models.py
-if errorlevel 1 (
-    echo ERROR: Model training failed.
-    pause
-    exit /b 1
+if exist saved_models\fraud_classifier.pkl (
+    echo [2/4] Trained ML models found. Skipping retraining...
+) else (
+    echo [2/4] Training ML models (first-time setup, ~2 minutes)...
+    python data\train_models.py
+    if errorlevel 1 (
+        echo ERROR: Model training failed.
+        pause
+        exit /b 1
+    )
 )
 
 echo.
 echo [3/4] Starting FastAPI backend on port 8000...
-start "RazorShield Backend" cmd /k "uvicorn main:app --reload --port 8000"
+start "RazorShield Backend" cmd /k "python -m uvicorn main:app --reload --port 8000"
 
 echo.
 echo [4/4] Installing frontend and starting dev server...

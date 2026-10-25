@@ -7,6 +7,11 @@ import sys
 from pathlib import Path
 from contextlib import asynccontextmanager
 
+# Add backend directory to sys.path so imports work regardless of working directory
+BACKEND_DIR = Path(__file__).resolve().parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 # Windows fix: force UTF-8 output so emoji / INR symbols don't crash the server
 if sys.platform == "win32":
     import io
@@ -167,3 +172,9 @@ def demo_chargeback():
         shipping_address="Koramangala, Bangalore, KA 560034",
         dispute_reason="not_received", txn_timestamp="2025-07-15 14:32:00 IST",
     ))
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+

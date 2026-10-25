@@ -4,7 +4,7 @@
 > *Empowering digital merchants to stop revenue bleed from fraud, RTO returns, and lost chargebacks.*
 
 [![RazorShield CI](https://github.com/aniketkus/razorshield/actions/workflows/ci.yml/badge.svg)](https://github.com/aniketkus/razorshield/actions)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Cloudflare%20Tunnel-blueviolet?style=for-the-badge&logo=cloudflare)](https://communications-controlled-animal-symbol.trycloudflare.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-1--Click%20Launch-blueviolet?style=for-the-badge&logo=cloudflare)](#-live-interactive-demo--tunnel)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
@@ -14,13 +14,24 @@
 
 ---
 
-## 🌐 Live Interactive Demo
+## 🌐 Live Interactive Demo & Tunnel
 
-Test the live full-stack system right now in your browser:  
-🔗 **[https://communications-controlled-animal-symbol.trycloudflare.com](https://communications-controlled-animal-symbol.trycloudflare.com)**
+RazorShield includes automated 1-click launch scripts to run the full defense platform locally or expose a live public HTTPS demo link via Cloudflare Tunnel:
 
-- **No login or password required** — instant access to live feeds, dynamic score sliders, and interactive ML explainability charts.
-- **Full-stack integration** — all dashboard actions execute real-time inference against the trained ML backend models.
+### 1. Instant Public Live Demo (Cloudflare Tunnel)
+To test across devices or share with evaluators over a secure public HTTPS link:
+```cmd
+start_live_tunnel.bat
+```
+- Automatically launches the **FastAPI ML backend** (port 8000) and **Vite frontend** (port 5173).
+- Initializes `cloudflared.exe` and outputs a fresh, live public **`https://*.trycloudflare.com`** URL in the console.
+
+### 2. Local Dashboard Access
+```cmd
+start.bat
+```
+- Boots the dashboard directly at **`http://localhost:5173`** (API Docs at `http://localhost:8000/docs`).
+- **Zero auth/database required** — instant live simulated feeds, dynamic score presets, and interactive ML explainability charts.
 
 ---
 
@@ -124,7 +135,8 @@ razorshield/
 │   ├── package.json           # React dependencies
 │   ├── tailwind.config.js     # Tailwind CSS theme configuration
 │   └── vite.config.js         # Vite configuration with full proxy & allowedHosts
-├── start.bat                  # One-click Windows startup script
+├── start.bat                  # One-click local startup script
+├── start_live_tunnel.bat      # One-click startup with Cloudflare live tunnel
 ├── SUBMISSION.md              # Official Razorpay Internship submission details
 └── README.md
 ```
@@ -134,11 +146,10 @@ razorshield/
 ## 🚀 Quick Start (Local Setup)
 
 ### Option 1: One-Click Startup (Windows)
-Double-click `start.bat` or run:
-```cmd
-start.bat
-```
-This automatically installs backend dependencies, trains/verifies ML models, starts the FastAPI server on port 8000, and boots the Vite dashboard on port 5173.
+- **Local Dashboard**: Double-click `start.bat` to run locally on `http://localhost:5173`.
+- **Public Live Tunnel**: Double-click `start_live_tunnel.bat` to run servers and expose a public `https://*.trycloudflare.com` URL.
+
+This automatically verifies ML models, starts the FastAPI server on port 8000, and boots the Vite dashboard on port 5173.
 
 ---
 
